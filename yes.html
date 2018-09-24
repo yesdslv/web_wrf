@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+	<head>
+		<meta charset="utf-8">
+		<title>Галлерея</title>
+		<script src="js/jquery-3.3.1.min.js"></script>
+	</head>
+	<body>
+		<select	id="myselect">
+			<option value="wind">Ветер</option>
+			<option value="temperature">Температура</option>
+			<option value="precipitation">Осадки</option>
+		</select>
+		<input  type="checkbox" id = "checkbox" name="gif" value="Гифка">Включить Анимацию<br>
+		<button type="button" id = "today">Сегодня</button>
+		<button type="button" id = "yesterday">Вчера</button>
+  		<div></div>
+     		<p id="changeable"></p>
+		<br>
+		<p id="date1"></p>
+		
+		<script>
+			
+			var d = new Date();
+			d.setDate(d.getDate() - 1);
+			var year = d.toLocaleDateString("en-US", {year : "numeric"});
+			var month = d.toLocaleDateString("en-US", {month : "2-digit"});
+			var day = d.toLocaleDateString("en-US", {day : "2-digit"});
+			var date = day + "." + month + "." + year;
+			console.log(date);
+			$("#date1").text(date);
+			$( "#myselect" ).change(function () {
+				var imgpath = '<img src="June.2018/20.06.2018/36H/13km/';
+				var text = $("#myselect :selected" ).val();
+				if($("#checkbox").is(":checked")){
+					imgpath = imgpath + text + "/" + text + '.gif">';
+				} else {
+					imgpath = imgpath + text + "/" + text + '.000001.png">';
+				}
+    				$( "#changeable" ).html( imgpath );
+				
+
+  			});
+			$("#checkbox").change(function() {
+				var imgpath = '<img src="June.2018/20.06.2018/36H/13km/';
+				var text = $("#myselect :selected" ).val();
+				if($("#checkbox").is(":checked")){
+					imgpath = imgpath + text + "/" + text + '.gif">';
+				} else {
+					imgpath = imgpath + text + "/" + text + '.000001.png">';
+				}
+    				$( "#changeable" ).html( imgpath );
+				
+			});
+		</script>
+	</body>
+</html>
