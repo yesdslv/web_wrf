@@ -33,6 +33,13 @@
 }
 */
 
+.image-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
 .btn:active
 {
   background-color:yellow;
@@ -42,4 +49,38 @@
 {
   color: #333;
   background-color:blue;
+}
+
+.prev{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+
+}
+
+.next{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  margin-left: 1000px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
 }

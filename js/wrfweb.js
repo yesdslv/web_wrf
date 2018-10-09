@@ -11,15 +11,18 @@
 				format = '.gif">';
 				$( '[class = prev]' ).replaceWith('<p class = "prev"></p>');
 				$( '[class = next]' ).replaceWith('<p class = "next"></p>');
+
 			} else {
 				format = '.png">';
 				picIndex = 1;
 				$('[class = prev]').replaceWith('<p class = "prev" onclick="plusSlides(-1)">&#10094;</p>');
-				$('[class = next]').replaceWith('<p  class = "next" onclick="plusSlides(1)">&#10095;</p>');	
+				$('[class = next]').replaceWith('<p  class = "next" onclick="plusSlides(1)">&#10095;</p>');
 			}
-			
+
+				optionChange();
+
 			var forecast36H = [
-				{"Id": "freeze", "Name": "Морозы"}, 
+				{"Id": "freeze", "Name": "Морозы"},
 				{"Id": "precipitation", "Name": "Осадки"},
 				{"Id": "preciptotal", "Name": "Осадки с накоплением"},
 				{"Id": "pressureLevel_500", "Name": "Давление на уровне 500"},
@@ -30,7 +33,7 @@
 				{"Id": "wind", "Name": "Ветер"},
 			];
 			var forecast168H = [
-				{"Id": "freeze", "Name": "Морозы"}, 
+				{"Id": "freeze", "Name": "Морозы"},
 				{"Id": "precipitation", "Name": "Осадки"},
 				{"Id": "preciptotal", "Name": "Осадки с накоплением"},
 				{"Id": "precip_daily_total", "Name": "Осадки с накоплением за сутки"},
@@ -42,14 +45,14 @@
 				{"Id": "wind", "Name": "Ветер"},
 			];
 			var forecastCARFFG = [
-				{"Id": "freeze", "Name": "Морозы"}, 
+				{"Id": "freeze", "Name": "Морозы"},
 				{"Id": "precipitation", "Name": "Осадки"},
 				{"Id": "preciptotal", "Name": "Осадки с накоплением"},
 				{"Id": "snowfall", "Name": "Снег"},
 				{"Id": "temperature", "Name": "Температура"},
 				{"Id": "wind", "Name": "Ветер"},
 			];
-	
+
 			//Date option button group
 			$('#date > .btn').click(function() {
 				picIndex = 1;
@@ -60,7 +63,7 @@
 				datestring = getDateString(date);
 				optionChange();
 			});
-			
+
 			//Forecast resolution and length button group
 			$('#forecast > .btn').click(function(){
 				picIndex = 1;
@@ -69,7 +72,7 @@
 				forecast = $(this).val();
 				$('#meteo').find('option').remove().end();
 				//When forecast resolution changes, meteo options updates to its values according to resolution
-				//Also meteo changes to first index value 
+				//Also meteo changes to first index value
 				if (forecast == '36H/13km') {
 					for (var i = 0; i < forecast36H.length; i++) {
 						$('#meteo').append('<option value="' + forecast36H[i].Id + '">' + forecast36H[i].Name + '</option>');
@@ -91,14 +94,14 @@
 				}
 				optionChange();
 			});
-			
-			//Meteorological parameters option box(like precipitation, temperature, wind) 
+
+			//Meteorological parameters option box(like precipitation, temperature, wind)
 			$("#meteo").change(function(){
 				picIndex = 1;
 				meteo = $('select option:selected').val();
 				optionChange();
 			});
-			
+
 			$('#gif').change(function() {
 				if($("input[type=checkbox]").is(":checked")) {
 					format = '.gif">';
@@ -109,11 +112,11 @@
 					picIndex = 1;
 					format = '.png">';
 					$('[class = prev]').replaceWith('<p class = "prev" onclick="plusSlides(-1)">&#10094;</p>');
-					$('[class = next]').replaceWith('<p  class = "next" onclick="plusSlides(1)">&#10095;</p>');	
+					$('[class = next]').replaceWith('<p  class = "next" onclick="plusSlides(1)">&#10095;</p>');
 				}
 				optionChange();
 			});
-			
+
 			// Next/previous controls
 			function plusSlides(n) {
 				//showSlides(picIndex += n);
@@ -147,8 +150,8 @@
 				}
 				optionChange();
 			}
-			
-			
+
+
 			function optionChange() {
 				if (format == '.gif">') {
 					picPath = meteo + format;
@@ -159,7 +162,7 @@
 				console.log(format);
 				$( "#image" ).html( path );
 			}
-			
+
 			function getDateString(date) {
 				var d = new Date();
 				if (date == 'today') {
@@ -183,6 +186,5 @@
 				}
 				return result;
 			}
-			
-			
-			
+
+

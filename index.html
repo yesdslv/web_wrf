@@ -6,12 +6,14 @@
 		<title>Галлерея</title>
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<link rel="stylesheet" href="js/wrfweb.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>	
-		
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
 	</head>
 	<body>
-		<div class="btn-group" role="group" id="date">
+		<div style="margin-left:600px;">
+		<div class="btn-group" role="group" id="date" >
 				 <button class="active btn btn-default" value="today">Сегодня</button>
 				 <button class="btn btn-default" value="yesterday">Вчера</button>
 				 <button class="btn btn-default" value="beforeyesterday">Позавчера</button>
@@ -23,7 +25,7 @@
 				 <button class="btn btn-default" value="CARFFG">Прогноз горных районов</button>
 		</div>
 		<br>
-		<select id = "meteo">
+		<select id = "meteo" style="width:250px;">
 			<option value="freeze" selected>Морозы</option>
 			<option value="precipitation">Осадки</option>
 			<option value="preciptotal">Осадки с накоплением</option>
@@ -34,16 +36,23 @@
 			<option value="temperature">Температура</option>
 			<option value="wind">Ветер</option>
 		</select>
-		<p><input  type="checkbox" id = "gif" value="Гифка">Включить Анимацию</p>
-  		<div></div>
-		<!-- Next and previous buttons -->
-		<p class = "prev"></p>
-		<p class = "next"></p>
+		<p><input  type="checkbox"  id = "gif" value="Гифка">Включить Анимацию</p>
+  		</div>
+
+
 		<div></div>
 		<br>
 		<div class="image-container">
+
 			<p id="image"></p>
+		<!-- Next and previous buttons -->
+			<p class = "prev" ></p>
+		<p class = "next"></p>
 		</div>
 		<script src="js/wrfweb.js"></script>
+
+
 	</body>
 </html>
+
+
