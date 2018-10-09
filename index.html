@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Галлерея</title>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<link rel="stylesheet" href="js/wrfweb.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>	
+		
+	</head>
+	<body>
+		<div class="btn-group" role="group" id="date">
+				 <button class="active btn btn-default" value="today">Сегодня</button>
+				 <button class="btn btn-default" value="yesterday">Вчера</button>
+				 <button class="btn btn-default" value="beforeyesterday">Позавчера</button>
+		</div>
+		<br>
+		<div class="btn-group" role="group" id="forecast">
+				 <button class="active btn btn-default" value="36H/13km">Прогноз на 36 часов</button>
+				 <button class="btn btn-default" value="168H">Прогноз на 168 часов</button>
+				 <button class="btn btn-default" value="CARFFG">Прогноз горных районов</button>
+		</div>
+		<br>
+		<select id = "meteo">
+			<option value="freeze" selected>Морозы</option>
+			<option value="precipitation">Осадки</option>
+			<option value="preciptotal">Осадки с накоплением</option>
+			<option value="pressureLevel_500">Давление на уровне 500</option>
+			<option value="pressureLevel_700">Давление на уровне 700</option>
+			<option value="pressureLevel_850">Давление на уровне 850</option>
+			<option value="snowfall">Снег</option>
+			<option value="temperature">Температура</option>
+			<option value="wind">Ветер</option>
+		</select>
+		<p><input  type="checkbox" id = "gif" value="Гифка">Включить Анимацию</p>
+  		<div></div>
+		<!-- Next and previous buttons -->
+		<p class = "prev"></p>
+		<p class = "next"></p>
+		<div></div>
+		<br>
+		<div class="image-container">
+			<p id="image"></p>
+		</div>
+		<script src="js/wrfweb.js"></script>
+	</body>
+</html>
