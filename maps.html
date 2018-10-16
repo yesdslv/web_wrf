@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="js/chosen.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/chosen.jquery.js"></script>
+    <link rel="stylesheet" href="js/wrfweb.css">
+      </head>
+        <body>
+<div style="margin-left:600px;">
+  <div class="btn-group" role="group" id="date" >
+   <button class="active btn btn-secondary" value="today">Сегодня</button>
+   <button class="btn btn-secondary" value="yesterday">Вчера</button>
+   <button class="btn btn-secondary" value="beforeyesterday">Позавчера</button>
+ </div>
+ <br>
+ <div class="btn-group" role="group" id="forecast">
+  <button class="active btn btn-secondary" value="36H/13km">Прогноз на 36 часов</button>
+  <button class="btn btn-secondary" value="168H">Прогноз на 168 часов</button>
+  <button class="btn btn-secondary" value="CARFFG">Прогноз горных районов</button>
+</div>
+<br>
+<select id = "meteo" style="width:250px;">
+  <option value="freeze" selected>Морозы</option>
+  <option value="precipitation">Осадки</option>
+  <option value="preciptotal">Осадки с накоплением</option>
+  <option value="pressureLevel_500">Давление на уровне 500</option>
+  <option value="pressureLevel_700">Давление на уровне 700</option>
+  <option value="pressureLevel_850">Давление на уровне 850</option>
+  <option value="snowfall">Снег</option>
+  <option value="temperature">Температура</option>
+  <option value="wind">Ветер</option>
+</select>
+<p><input  type="checkbox"  id = "gif" value="Гифка">Включить Анимацию</p>
+</div>
+<br>
+<div class="image-container">
+
+  <p id="image"></p>
+  <!-- Next and previous buttons -->
+  <p class = "prev" ></p>
+  <p class = "next"></p>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/wrfweb.js"></script>
+</body>
+</html>

@@ -166,19 +166,19 @@
 			function getDateString(date) {
 				var d = new Date();
 				if (date == 'today') {
-					d.setDate(d.getDate() -14);
+					d.setDate(d.getDate() -16);
 					var year = d.toLocaleDateString('en-US', {year : 'numeric'});
 					var month = d.toLocaleDateString('en-US', {month : '2-digit'});
 					var day = d.toLocaleDateString('en-US', {day : '2-digit'});
 					result = day + "." + month + "." + year;
 				} else if (date == 'yesterday') {
-					d.setDate(d.getDate()-15);
+					d.setDate(d.getDate()-17);
 					var year = d.toLocaleDateString('en-US', {year : 'numeric'});
 					var month = d.toLocaleDateString('en-US', {month : '2-digit'});
 					var day = d.toLocaleDateString('en-US', {day : '2-digit'});
 					result = day + "." + month + "." + year;
 				} else if (date == 'beforeyesterday') {
-					d.setDate(d.getDate()-16);
+					d.setDate(d.getDate()-18);
 					var year = d.toLocaleDateString('en-US', {year : 'numeric'});
 					var month = d.toLocaleDateString('en-US', {month : '2-digit'});
 					var day = d.toLocaleDateString('en-US', {day : '2-digit'});

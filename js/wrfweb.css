@@ -40,7 +40,7 @@
 }
 
 
-.btn:active
+/*.btn:active
 {
   background-color:yellow;
 }
@@ -49,7 +49,7 @@
 {
   color: #333;
   background-color:blue;
-}
+}*/
 
 .prev{
   cursor: pointer;
@@ -83,4 +83,18 @@
 
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
+}
+
+
+.searchbox {
+    border:1px solid #456879;
+    border-radius:6px;
+    height: 22px;
+    width: 200p;
+    margin-top: 5px;
+}
+     .btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: #bfb6b6;
+    border-color: #4e555b;
 }

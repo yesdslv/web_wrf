@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  	<head>
+    		<meta charset="utf-8">
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
+    		<title>Галлерея</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="js/chosen.css">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/chosen.jquery.js"></script>
+    <link rel="stylesheet" href="js/wrfweb.css">
+	</head>
+	<style type="text/css">
+		.dropdown {
+  			display: inline-block;
+			vertical-align:top;
+		}
+    button{
+      width:350px;
+    }
+    select{
+      width: 350px;
+    }
+	</style>
+	<body>
+		<div class="btn-group" role="group" id="date" >
+			<button class="active btn btn-default" value="today">Сегодня</button>
+			<button class="btn btn-default" value="yesterday">Вчера</button>
+			<button class="btn btn-default" value="beforeyesterday">Позавчера</button>
+		</div>
+		<br>
+		<div class="dropdown">
+			<button class="btn btn-secondary" type="button" id = "Meteo36HButton" aria-haspopup="true" aria-expanded="false">
+			Метеограммы на 36 часов
+			</button>
+			<div>
+				<select class="livesearch" id = "forecast36H"></select>
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="btn btn-secondary" type="button"  id = "Meteo168HButton" aria-haspopup="true" aria-expanded="false">
+			Метеограммы на 168 часов
+			</button>
+			<div>
+				<select class="livesearch" id = "forecast168H"></select>
+			</div>
+		</div>
+		<div class="dropdown">
+		<button class="btn btn-secondary" type="button"  id = "CARFFGButton" aria-haspopup="true" aria-expanded="false">
+			Метеограммы для горной местности
+		</button>
+		<div>
+			<select class="livesearch" id = "CARFFG"></select>
+			</div>
+		</div>
+		<div class="dropdown">
+  			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    			Метеограммы с высоким разрешением
+  			</button>
+  			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    				<option class="dropdown-item" value="Aksay">Аксай</<option>
+    				<option class="dropdown-item" value="Aktau">Актау</option>
+    				<option class="dropdown-item" value="Aktobe">Актобе</option>
+    				<option class="dropdown-item" value="Almaty">Алматы</option>
+    				<option class="dropdown-item" value="Astana">Астана</option>
+    				<option class="dropdown-item" value="Atyrau">Атырау</option>
+    				<option class="dropdown-item" value="Balkhash">Балхаш</option>
+    				<option class="dropdown-item" value="Ekibastuz">Экибастуз</option>
+    				<option class="dropdown-item" value="Karagandy">Караганда</option>
+    				<option class="dropdown-item" value="Kokshetau">Кокшетау</option>
+    				<option class="dropdown-item" value="Kostanai">Костанай</option>
+    				<option class="dropdown-item" value="Kyzylorda">Кызылорда</option>
+    				<option class="dropdown-item" value="Oral">Уральск</option>
+    				<option class="dropdown-item" value="Pavlodar">Павлодар</option>
+    				<option class="dropdown-item" value="Petropavl">Петропавловск</option>
+    				<option class="dropdown-item" value="Semei">Семей</option>
+    				<option class="dropdown-item" value="Shymkent">Шымкент</option>
+    				<option class="dropdown-item" value="Taldykorgan">Талдыкорган</option>
+    				<option class="dropdown-item" value="Taraz">Тараз</option>
+    				<option class="dropdown-item" value="Temirtau">Темиртау</option>
+    				<option class="dropdown-item" value="UstKamenogorsk">Усть-Каменогорск</option>
+    				<option class="dropdown-item" value="Zhezkazgan">Жезказган</option>
+  			</div>
+		</div>
+		<br>
+		<p id="image"></p>
+	<script src="js/meteogram.js"></script>
+	</body>
+</html>
+
